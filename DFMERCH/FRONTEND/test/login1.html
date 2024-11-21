@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="login1.css">
+</head>
+	<div class="container" id="container">
+  <div class="web-login">
+    <!-- Sign Up Form -->
+    <div class="form-container sign-up-container" id="sign-up-container">
+      <form action="#">
+        <h1>Create Account</h1>
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="Last Name" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button class="signinb sign-up-form button">Sign Up</button>
+      </form>
+    </div>
+
+    <!-- Sign In Form -->
+    <div class="form-container sign-in-container" id="sign-in-container">
+      <form action="#">
+        <h1>Sign in</h1>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <a class="fpass" href="#" id="forgot-password-link">Forgot your password?</a>
+        <button class="siginb sign-in-form button">Sign In</button>
+      </form>
+    </div>
+
+    <!-- Forgot Password Form -->
+    <div class="form-container forgot-password-container" id="forgot-password-container" style="display: none;">
+      <form action="#">
+        <h1>Reset Password</h1>
+        <p>Please enter your email address to receive a password reset link.</p>
+        <input type="email" placeholder="Email" />
+        <button class="siginb forgot-password-form button">Send Reset Link</button>
+        <a href="#" id="back-to-sign-in">Back to Sign In</a>
+      </form>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>Stay connected with us! Log in to access exclusive merch and personalized offers.</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Hello, Friend!</h1>
+          <p>Enter your details to start your journey with us and unlock exclusive merch!</p>
+          <button class="ghost" id="signUp">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+	<div class="mobileform">
+		<div class="mobile-signup">
+			<form action="#">
+				<h1>Create Account</h1>
+				<input type="text" placeholder="First Name" />
+				<input type="text" placeholder="Last Name" />
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+			<div class="button-container">
+				<button class="signinb sign-up-form button">Sign Up</button>
+			</div>
+			<div class="signin-option">
+				<a href="#sign-in-container" id="already-acc" class="already-acc">&#8592; I already have an Account</a>
+			</div>
+			</form>
+		</div>
+		<div class="mobile-signin" >
+			<form action="#">
+				<h1>Sign in</h1>
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<a class="fpass" href="#">Forgot your password?</a>
+			<div class="button-container">
+				<button class="siginb sign-in-form button">Sign In</button>
+			</div>
+			<div class="signup-option">
+				<a href="#sign-up-container" id="create-acc"  class="create-acc">Create your Account &#8594;</a>
+			</div>
+			</form>
+		</div>
+</div>
+
+<script src="login1.js"></script>
+<script src="login2.js"></script>
+</body>
+</html>

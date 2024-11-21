@@ -1,0 +1,82 @@
+.location{
+  height: auto;
+  background: linear-gradient(0deg,white,#8EA58C);
+}
+.up{
+  padding-top: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.DFMERCHL{
+  font-size: 50px;
+  font-family: 'Krona One', sans-serif;
+  text-align: center;
+  margin-bottom: 0px;
+}
+.loc{
+  font-size: 20px;
+  font-family: 'Krona One',sans-serif;
+  margin: 0px 0px 50px 0px;
+}
+.maps{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding-bottom: 10%;
+}
+.mainmap, .satellitemap{
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 23px
+}
+.mapbtn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.maincamp, .satellitecamp{
+  background-color: #E0E375;
+  font-family: 'Krona One', sans-serif;
+  font-size: 10px;
+  text-decoration: none;
+  user-select: none;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 0px #383737, 0px 10px 20px rgba(136, 133, 133, 0.3);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.maincamp:hover, .satellitecamp:hover{
+  box-shadow: 0px 4px 0px #383737, 0px 6px 15px rgba(136, 133, 133, 0.2);
+  transform: translateY(2px) scale(0.95); 
+  padding: 8px 18px;
+  font-size: 8px;
+}
+@media (max-width: 768px) {
+  .maps{
+     flex-direction: column;
+   }
+  .mainmap, .satellitemap{
+     flex-direction: column;
+   }
+   .mainmap{
+    margin-bottom: 5%;
+   }
+   .DFMERCHL{
+    font-size: 25px;
+   }
+   .loc{
+    font-size: 10px;
+    margin: 0px 0px 25px 0px;
+   }
+   .maps{
+     padding-bottom: 20%;
+   }
+
+}

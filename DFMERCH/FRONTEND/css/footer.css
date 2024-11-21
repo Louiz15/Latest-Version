@@ -1,0 +1,80 @@
+/* Default desktop view */
+.footerdf {
+  background-color: rgba(1, 32, 29, 0.9); /* Slightly transparent */
+  padding: 20px 0;
+  color: #ffffff;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #ffffff;
+  font-family: 'Krona One', sans-serif;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #00d4ff;
+}
+
+.footer img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease;
+}
+
+.footer img:hover {
+  transform: scale(1.1);
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .footer div {
+    width: 45%; /* Stack two columns side-by-side */
+    margin: 10px 0;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer div {
+    width: 100%; /* Full width for each contact method */
+    margin: 10px 0;
+  }
+
+  .footer a {
+    font-size: 12px; /* Slightly smaller text for mobile */
+  }
+
+  .footer img {
+    width: 30px; /* Smaller icons for mobile */
+    height: 30px;
+  }
+}

@@ -1,0 +1,155 @@
+/* Main background styling for the contact section */
+.contactus {
+  background: linear-gradient(0deg, #BFCFBB, white);
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-bottom: 10% ;
+}
+
+/* Glass effect on the contact form */
+.contactusb {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px); /* Glass blur effect */
+  max-width: 500px;
+  z-index: 10; /* Bring form to the front */
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: border for glass look */
+}
+
+/* Scrolling container positioning */
+.scrolling-containers {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 25%; /* Adjust to control vertical position */
+  height: 300px;
+  z-index: 1; /* Keeps it behind the form */
+}
+
+/* Slow scrolling animation */
+@keyframes scrollSlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.infinite-scrolls {
+  display: flex;
+  animation: scrollSlow 25s linear infinite;
+}
+
+.org-logos {
+  width: 240px;
+  height: 240px;
+  opacity: 0.3;
+  margin: 0 10px; /* Space between logos */
+}
+
+/* Title styling */
+.up {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.DFMERCHC {
+  font-size: 50px;
+  font-family: 'Krona One', sans-serif;
+  color: #151515;
+}
+
+.cont {
+  font-size: 20px;
+  font-family: 'Krona One', sans-serif;
+  margin: 10px 0 30px;
+  color: #555;
+}
+
+/* Form styling */
+.contactform form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contactform input[type="text"],
+.contactform input[type="email"],
+.contactform textarea {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #333;
+  backdrop-filter: blur(4px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactform input[type="text"]:focus,
+.contactform input[type="email"]:focus,
+.contactform textarea:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+  outline: none;
+}
+
+/* Textarea styling */
+.contactform textarea {
+  resize: none;
+  height: 100px;
+}
+
+
+.contactform input[type="submit"] {
+  padding: 10px 16px; 
+  font-size: 0.9em;
+  color: #ffffff;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 25px; 
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contactform input[type="submit"]:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+.contactform input[type="submit"]:active {
+  background-color: #004085;
+  transform: scale(0.98); 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .org-logos {
+    user-select: none;
+    width: 150px;
+    height: 150px;
+    opacity: 0.32;
+  }
+  .infinite-scrolls{
+    margin-top: 60px;
+  }
+  .DFMERCHC {
+    font-size: 25px;
+  }
+  
+  .cont {
+    font-size: 10px;
+    margin: 5px 0 15px;
+  }
+  
+}

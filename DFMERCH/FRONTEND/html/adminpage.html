@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DFMERCH ADMIN PAGE</title>
+  <link rel="stylesheet" href="/FRONTEND/css/adminpage.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="scrolling-container">
+    <div class="infinite-scroll">
+    <img src="/FRONTEND/images/1st.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/4th.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/3rd.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/5th.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/2nd.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/6th.png" alt="Organization Logo" class="org-logo">
+    
+    <img src="/FRONTEND/images/1st.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/4th.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/3rd.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/5th.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/2nd.png" alt="Organization Logo" class="org-logo">
+    <img src="/FRONTEND/images/6th.png" alt="Organization Logo" class="org-logo">
+    </div>
+  </div>
+  <div class="adminpage" id="adminpage">
+    <div class="adminheader" id="adminheader">
+      <div class="left-header" id="left-header">
+        <a href="" class="logoadmin"><img src="/FRONTEND/images/logo.png" alt="logoadmin" class="logoadmins"></a>
+      </div>
+      <div class="right-header" id="rightheader">
+        <li><a href="" class="additems" id="additems">ADD ITEMS</a></li>
+        <li><a href="" class="viewitems" id="viewitems">VIEW ITEMS</a></li>
+      </div>
+    </div>
+    <div class="adminadditems" id="adminadditems">
+      <form id="addItemForm">
+        <!-- Upload Image -->
+        <label for="productImage">Upload Image:</label>
+        <input type="file" id="productImage" accept="image/*" required><br><br>
+      
+        <!-- Product Name -->
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required><br><br>
+      
+        <!-- Stock -->
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" min="0" required><br><br>
+      
+        <!-- Product Type -->
+        <label for="productType">Type of Product:</label>
+        <select id="productType" onchange="toggleSizes()">
+          <option value="tshirt">T-Shirt</option>
+          <option value="totebag">Tote Bag</option>
+          <option value="idlace">ID Lace</option>
+          <option value="pin">Pin</option>
+        </select><br><br>
+      
+        <!-- Sizes (Visible Only for T-Shirts) -->
+        <div id="sizeOptions" style="display: none;">
+          <label>Available Sizes:</label><br>
+          <input type="checkbox" id="sizeXS" value="XS"> XS
+          <input type="checkbox" id="sizeS" value="S"> S
+          <input type="checkbox" id="sizeM" value="M"> M
+          <input type="checkbox" id="sizeL" value="L"> L
+          <input type="checkbox" id="sizeXL" value="XL"> XL
+          <input type="checkbox" id="size2XL" value="2XL"> 2XL<br><br>
+        </div>
+      
+        <!-- Price -->
+        <label for="price">Price:</label>
+        <input type="number" id="price" min="0" step="0.01" required><br><br>
+      
+        <!-- Submit Button -->
+        <button type="submit">Add Item</button>
+      </form>
+    </div>
+  </div>
+<script src="/FRONTEND/js/admin.js"></script>
+<script src="/FRONTEND/js/index.js" defer></script>
+</body>
+</html>

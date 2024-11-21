@@ -1,0 +1,319 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body{
+  height: 200vh;
+  scroll-behavior: smooth;
+  background-color: beige;
+  overflow-x: hidden;
+}
+.Home{
+background: linear-gradient(0deg,#738A6E,white,#BFCFBB);
+height: 650px;
+}
+.nav-bar{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 10px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 58px;
+  user-select: none;
+}
+
+
+.logo{
+  width: 50px;
+  height: auto;
+  user-select: none;
+}
+nav{
+  display: none;
+}
+.mid{
+  display:flex;
+  gap: 30px;
+  list-style-type: none;
+  font-weight: lighter;
+  align-items: center;
+  margin-left: 30px;
+
+}
+
+.mid a{
+  font-size: 14px;
+  color: black;
+  text-decoration: none;
+  font-family: 'Inter' italic;
+  
+}
+
+.login-btn{
+background-color: #E0E375;
+padding: 10px 30px 10px 30px;
+border-radius: 30px;
+font-size: 10px;
+font-family: 'Krona One', sans-serif;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.mid :hover{
+  color: #696b2a;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline #1e1f00;
+}
+.right :hover{
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+.landing{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+.big{
+  margin-top: 150px;
+  margin-bottom: 8px;
+  margin-left: 40px;
+  z-index: 1;
+  align-items: center;
+}
+.DFMERCH{
+  font-family: 'Krona One', sans-serif;
+  font-size: 96px;
+  letter-spacing: 0.24em;
+  text-align: center;
+  user-select: none;
+}
+.big :hover{
+  opacity: 0.9;;
+  color: #17180c;
+  letter-spacing: 0.45em;
+
+}
+.small{
+  margin-bottom: 24px;
+  z-index: 1;
+}
+.desc{
+  font-family: 'Inter' italic;
+  font-size: 16px;
+  text-align: center;
+  user-select: none;
+  letter-spacing: 0.1em;
+}
+.shop-btn{
+  user-select: none;
+  margin-top: 24px;
+  z-index: 1;
+}
+.shopbtn {
+  background-color: #E0E375;
+  font-family: 'Krona One', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  user-select: none;
+  color: black;
+  padding: 20px 40px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 0px #383737, 0px 10px 20px rgba(136, 133, 133, 0.3);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.shopbtn:hover {
+  box-shadow: 0px 4px 0px #383737, 0px 6px 15px rgba(136, 133, 133, 0.2);
+  transform: translateY(2px) scale(0.95); 
+  padding: 18px 38px;
+  font-size: 14px;
+}
+.scrolling-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top: 17%; /* Adjust to control vertical position */
+  opacity: 1.50; /* Optional: reduces visibility without full transparency */
+  height: 300px;
+  user-select: none; /* Set height to prevent it from covering content */
+
+}
+/* Slow scrolling animation */
+@keyframes scrollSlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+.scrolling-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  bottom: 100px;
+  user-select: none;
+}
+
+.infinite-scroll {
+  display: flex;
+  animation: scrollSlow 25s linear infinite;
+}
+.org-logo {
+  user-select: none;
+  width: 240px;
+  height: 240px;
+  opacity: 0.32;
+}
+
+
+#login-btn{
+  text-decoration: none;
+}
+  @media (max-width: 768px) {
+  .logo{
+    margin-top: 10px;
+    margin-left: 0px;
+    user-select: none;
+  }
+
+  .DFMERCH {
+    font-size: 37px;
+  }
+  .shopbtn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .shopbtn:hover{
+    box-shadow: 0px 4px 0px #383737, 0px 6px 15px rgba(136, 133, 133, 0.2);
+    transform: translateY(2px) scale(0.95); 
+    padding: 9px 19px;
+    font-size: 11px;
+  }
+
+  .search-icon {
+    max-width: 200px;
+  }
+
+  .dropdown-container {
+    width: 150px;
+  }
+}
+
+@media (max-width: 610px) {
+.desc{
+  font-size: 10px;
+}
+.small{
+  margin-bottom: 0px;
+}
+.mid{
+  display: none;
+}
+.right{
+  display: none;
+}
+
+.left{
+  margin-left: -30px;
+  margin-top: 8px;
+}
+ nav{
+  display: flex;
+  justify-content: space-between;
+ }
+
+ nav ul{
+  background: linear-gradient(180deg,#BFCFBB,white);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  margin: 0;
+  list-style: none;
+  width: 40%;
+  text-align: right;
+  padding: 2em;
+  transform: translateX(100%);
+  transition: transform 0.8s ease-in-out;
+
+}
+nav li{
+  margin: 1em 0;
+}
+.first-li{
+  margin-bottom: 2em;
+}
+.nav-mob a{
+  color: black;
+  text-decoration: none;
+  font-family: 'Inter' sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  user-select: none;
+}
+
+.open{
+  transform: translateX(0%);
+}
+.burger-menu{
+  margin-top: 25px;
+  margin-right: -30px;
+}
+.logo{
+  margin-top: 10px;
+  margin-left: 0px;
+  user-select: none;
+}
+
+.DFMERCH {
+  font-size: 35px;
+}
+.shopbtn {
+  padding: 8px 18px;
+  font-size: 12px;
+}
+
+.shopbtn:hover{
+  box-shadow: 0px 4px 0px #383737, 0px 6px 15px rgba(136, 133, 133, 0.2);
+  transform: translateY(2px) scale(0.95); 
+  padding: 6px 16px;
+  font-size: 11px;
+}
+
+.dropdown-container {
+  width: 100px;
+}
+.org-logo {
+  user-select: none;
+  width: 120px;
+  height: 120px;
+  opacity: 0.32;
+}
+.infinite-scroll{
+  margin-top: 10px;
+}
+.right-btn{
+  margin-top: 40px;
+}
+.Home{
+  height: 450px;
+}
+.big{
+  margin-left: 15px;
+}
+}

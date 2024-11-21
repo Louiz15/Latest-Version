@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+body {
+  height: 200vh;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background: linear-gradient(0deg,#738A6E,white,#BFCFBB);
+}
+
+.adminheader {
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.logoadmins {
+  width: 60px;
+  height: auto;
+  user-select: none;
+}
+
+.right-header {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.right-header a {
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+.right-header a:hover {
+  text-decoration: underline 2px red;
+}
+
+/* Form Styles */
+#addItemForm {
+  max-width: 500px;
+  margin: 120px auto 2rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.3); /* Semi-transparent white */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border */
+  font-family: Arial, sans-serif;
+}
+
+#addItemForm label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  color: #333;
+}
+
+#addItemForm input[type="text"],
+#addItemForm input[type="number"],
+#addItemForm input[type="file"],
+#addItemForm select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Semi-transparent border */
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.2); /* Light translucent background */
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  color: #333;
+}
+
+#addItemForm input[type="text"]:focus,
+#addItemForm input[type="number"]:focus,
+#addItemForm input[type="file"]:focus,
+#addItemForm select:focus {
+  border-color: #0077ff;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+#addItemForm #sizeOptions label {
+  font-weight: normal;
+  margin-right: 10px;
+  color: #555;
+}
+
+#addItemForm #sizeOptions {
+  margin-bottom: 1rem;
+}
+
+
+#addItemForm button[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  background-color: #0077ff;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#addItemForm button[type="submit"]:hover {
+  background-color: #005bb5;
+}
+.scrolling-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  top:35%; /* Adjust to control vertical position */
+  opacity: 1.50; /* Optional: reduces visibility without full transparency */
+  height: 300px;
+  user-select: none; /* Set height to prevent it from covering content */
+
+}
+/* Slow scrolling animation */
+@keyframes scrollSlow {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+.scrolling-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  bottom: 100px;
+  user-select: none;
+}
+
+.infinite-scroll {
+  display: flex;
+  animation: scrollSlow 25s linear infinite;
+}
+.org-logo {
+  user-select: none;
+  width: 240px;
+  height: 240px;
+  opacity: 0.32;
+}
+
+#addItemForm button[type="submit"]:hover {
+  background-color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .adminheader {
+    padding: 10px 20px;
+  }
+  #addItemForm {
+    padding: 1.5rem;
+  }
+  .right-header {
+    gap: 10px;
+  }
+}

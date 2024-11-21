@@ -1,0 +1,251 @@
+.shop-sec {
+  height: 700px;
+  background: linear-gradient(0deg, #8EA58C, white, #738A6E);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Flex container */
+.upper {
+  margin-top: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  gap: 30px;
+  flex-wrap: wrap; /* Enables wrapping for smaller screens */
+}
+
+/* Search bar styling */
+.search-bar {
+  padding: 10px 20px;
+  background-image: url('/FRONTEND/images/search.svg');
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  border: 2px solid #333;
+  border-radius: 25px;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: border 0.3s, background-color 0.3s;
+  width: 180px; /* Ensures it's not too wide */
+}
+
+.search-bar:focus {
+  border-color: #007BFF;
+  background-color: #f0f0f0;
+  outline: none;
+}
+
+/* SHOP Title styling */
+.shopicon {
+  font-family: 'Krona One', sans-serif;
+  font-size: 26px;
+  color: #222;
+  margin: 0;
+  text-align: center;
+  padding: 0 20px;
+  flex-grow: 1;
+}
+
+/* Dropdown styling */
+.dropdown {
+  padding: 10px 15px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #222;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s;
+  min-width: 120px; /* Makes sure the dropdown is not too narrow */
+}
+
+.dropdown:hover {
+  background-color: #f0f0f0;
+}
+
+.dropdown-container {
+  position: relative;
+}
+
+/* Cart icon styling */
+.cart-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.cart-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+@media (max-width: 768px) {
+  .upper {
+    gap: 15px;
+  }
+  .search-bar {
+    font-size: 8px;
+    padding: 8px 12px;
+    background-size: 15px;
+    width: 140px; /* Adjusting width for smaller screens */
+  }
+  .shopicon {
+    font-size: 20px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .dropdown {
+    padding: 8px 10px;
+    font-size: 12px;
+  }
+  .cart-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 602px) {
+  .cartbtn {
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .cartbtn {
+    padding-left: 0;
+  }
+  .upper {
+    gap: 5px;
+  }
+  .search-bar {
+    font-size: 8px;
+    padding: 6px 8px;
+    background-size: 12px;
+    width: 120px;
+  }
+  .shopicon {
+    font-size: 18px;
+  }
+  .dropdown {
+    font-size: 10px;
+    padding: 6px 8px;
+  }
+  .cart-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .upper {
+    gap: 10px;
+    flex-wrap: wrap; /* Ensure elements wrap to the next line */
+    justify-content: space-between; /* Distribute space evenly */
+  }
+
+  .search-bar {
+    font-size: 8px;
+    padding: 6px 8px;
+    background-size: 12px;
+    width: 120px; /* Adjust the width */
+  }
+
+  .shopicon {
+    font-size: 14px;
+    text-align: center;
+    flex-basis: 100%; /* Make the shop icon take the full width */
+  }
+
+  .dropdown {
+    font-size: 10px;
+    padding: 6px 8px;
+    flex-basis: 100%; /* Make dropdown take full width if needed */
+    margin-top: 5px; /* Add margin to avoid overlapping with cart */
+  }
+
+  .cart-icon {
+    width: 20px;
+    height: 20px;
+    flex-basis: 100%; /* Make cart icon take full width if needed */
+    margin-top: 5px; /* Add margin to prevent overlap */
+  }
+}
+
+@media (max-width: 444px) {
+  .upper {
+    gap: 5px;
+    flex-wrap: wrap; /* Ensure elements wrap to the next line */
+    justify-content: space-between; /* Distribute space evenly */
+  }
+
+  .search-bar {
+    font-size: 6px;
+    padding: 4px 6px;
+    background-size: 10px;
+    width: 100px; /* Narrower width */
+  }
+
+  .shopicon {
+    font-size: 12px;
+    text-align: center;
+    flex-basis: 100%; /* Make the shop icon take the full width */
+  }
+
+  .dropdown {
+    font-size: 8px;
+    padding: 6px 8px;
+    flex-basis: 100%; /* Make dropdown take full width if needed */
+    margin-top: 5px; /* Add margin to avoid overlapping with cart */
+  }
+
+  .cart-icon {
+    width: 18px;
+    height: 18px;
+    flex-basis: 100%; /* Make cart icon take full width if needed */
+    margin-top: 5px; /* Add margin to prevent overlap */
+  }
+}
+
+@media (max-width: 444px) {
+  .upper {
+    gap: 5px;
+    flex-wrap: wrap; /* Ensure elements wrap to the next line */
+    justify-content: space-between; /* Distribute space evenly */
+  }
+  
+  .search-bar {
+    font-size: 6px;
+    padding: 4px 6px;
+    background-size: 10px;
+    width: 100px; /* Narrower width */
+  }
+  
+  .shopicon {
+    font-size: 12px;
+    text-align: center;
+    flex-basis: 100%; /* Make the shop icon take the full width */
+  }
+  
+  .dropdown {
+    font-size: 8px;
+    padding: 6px 8px;
+    flex-basis: 100%; /* Make dropdown take full width if needed */
+    margin-top: 5px; /* Add margin to avoid overlapping with cart */
+  }
+  
+  .cart-icon {
+    width: 18px;
+    height: 18px;
+    flex-basis: 100%; /* Make cart icon take full width if needed */
+    margin-top: 5px; /* Add margin to prevent overlap */
+  }
+}
+

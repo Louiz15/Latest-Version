@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Snake Game</title>
+    <link rel="stylesheet" href="/FRONTEND/css/game.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Snake Game</h1>
+        <div id="scoreBoard">
+            <div class="score-item">
+                <span class="score-label">SCORE</span>
+                <span class="score-value" id="scoreText">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">HIGH SCORE</span>
+                <span class="score-value" id="highScoreText">0</span>
+            </div>
+        </div>
+        <div id="gameBoard">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="gameControls">
+            <div class="speed-control">
+                <span class="speed-label">SPEED</span>
+                <span id="speedValue">Normal</span>
+            </div>
+            <input type="range" id="speedSlider" min="1" max="5" value="3">
+        </div>
+        <div id="controls">
+            <div></div>
+            <button class="control-btn" id="upBtn">↑</button>
+            <div></div>
+            <button class="control-btn" id="leftBtn">←</button>
+            <div></div>
+            <button class="control-btn" id="rightBtn">→</button>
+            <div></div>
+            <button class="control-btn" id="downBtn">↓</button>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="gameOverModal">
+        <h2>Game Over!</h2>
+        <p>Final Score: <span id="finalScore">0</span></p>
+        <button id="restartBtn">Play Again</button>
+    </div>
+
+    <script src="/FRONTEND/js/game.js"></script>
+</body>
+</html>
